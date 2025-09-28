@@ -10,7 +10,7 @@
 ## 一、实验目的
 
 1. 掌握Android中常用布局的使用方法
-2. 学习LinearLayout、ConstraintLayout、TableLayout等布局的特点和应用场景
+2. 学习`LinearLayout`、`ConstraintLayout`、`TableLayout`等布局的特点和应用场景
 3. 理解不同布局的嵌套使用和约束关系
 4. 熟悉Android界面设计的基本原则
 
@@ -65,40 +65,141 @@
 
 ## 四、核心代码说明
 
-### 4.1 LinearLayout关键特性
+### 4.1 LinearLayout关键特性 ([linearlayout.xml](file://D:\data\android_project\layout\src\main\res\layout\linearlayout.xml))
 ```xml
 <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
     android:orientation="vertical"
+    android:padding="2dp"
     android:background="#000000">
     
     <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:orientation="horizontal">
-        <!-- 子元素 -->
+        
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="#FFFFFF"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="One,One"
+            android:textColor="#000000"
+            android:layout_marginRight="2dp"/>
+        <!-- 其他TextView元素 -->
     </LinearLayout>
+    <!-- 其他行 -->
 </LinearLayout>
 ```
 
 
-### 4.2 ConstraintLayout关键特性
+### 4.2 ConstraintLayout计算器布局关键特性 ([constraintlayout.xml](file://D:\data\android_project\layout\src\main\res\layout\constraintlayout.xml))
 ```xml
-<androidx.constraintlayout.widget.ConstraintLayout>
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    
     <TextView
+        android:id="@+id/tvResult"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@id/tvInputHint"/>
+        
+    <Button
+        android:id="@+id/btn7"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        app:layout_constraintEnd_toStartOf="@id/btn8"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvResult"/>
+    <!-- 其他按钮 -->
 </androidx.constraintlayout.widget.ConstraintLayout>
 ```
 
 
-### 4.3 TableLayout关键特性
+### 4.3 TableLayout关键特性 ([tablelayout.xml](file://D:\data\android_project\layout\src\main\res\layout\tablelayout.xml))
 ```xml
 <TableLayout
-    android:stretchColumns="0">
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:stretchColumns="0"
+    android:background="#000000">
     
     <TableRow>
-        <TextView />
-        <TextView />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Hello TableLayout"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="#FFFFFF" />
+        <!-- 可选的第二列 -->
     </TableRow>
+    <!-- 其他行 -->
 </TableLayout>
+```
+
+
+### 4.4 复杂ConstraintLayout太空旅行布局关键特性 ([constraintlayout2.xml](file://D:\data\android_project\layout\src\main\res\layout\constraintlayout2.xml))
+```xml
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    
+    <!-- 图标和标签组合 -->
+    <ImageView
+        android:id="@+id/iv_space_station"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/tv_space_stations"/>
+        
+    <TextView
+        android:id="@+id/tv_space_stations"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@id/iv_space_station"
+        app:layout_constraintTop_toBottomOf="@id/iv_space_station"/>
+        
+    <!-- 出发和目的地选择 -->
+    <TextView
+        android:id="@+id/tv_dca"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_space_stations"/>
+        
+    <!-- 选项和控件 -->
+    <TextView
+        android:id="@+id/tv_one_way_label"
+        android:layout_width="60dp"
+        android:layout_height="28dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_dca"/>
+        
+    <Switch
+        android:id="@+id/switch_one_way"
+        android:layout_width="60dp"
+        android:layout_height="28dp"
+        app:layout_constraintStart_toEndOf="@+id/tv_one_way_label"
+        app:layout_constraintTop_toTopOf="@+id/tv_one_way_label"/>
+        
+    <!-- 底部按钮 -->
+    <Button
+        android:id="@+id/btn_depart"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+</androidx.constraintlayout.widget.ConstraintLayout>
 ```
 
 
