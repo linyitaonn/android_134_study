@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="2dp"
+    android:background="#000000"> <!-- 整体背景设为黑色 -->
+
+    <!-- 第一行 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="2dp"> <!-- 行与行之间的白色间隔 -->
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="#FFFFFF"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="One,One"
+        android:textColor="#000000"
+        android:layout_marginRight="2dp"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="#FFFFFF"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="One,Two"
+            android:textColor="#000000"
+            android:layout_marginRight="2dp"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="#FFFFFF"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="One,Three"
+            android:textColor="#000000"
+            android:layout_marginRight="2dp"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="#FFFFFF"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="One,Four"
+            android:textColor="#000000"/>
+    </LinearLayout>
+
+    <!-- 第二行 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="2dp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="#FFFFFF"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="Two,One"
+            android:textColor="#000000"
+            android:layout_marginRight="2dp"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="#FFFFFF"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="Two,Two"
+            android:textColor="#000000"
+            android:layout_marginRight="2dp"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="#FFFFFF"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="Two,Three"
+            android:textColor="#000000"
+            android:layout_marginRight="2dp"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="#FFFFFF"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="Two,Four"
+            android:textColor="#000000"/>
+    </LinearLayout>
+
+    <!-- 第三行 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="2dp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="#FFFFFF"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="Three,One"
+            android:textColor="#000000"
+            android:layout_marginRight="2dp"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="#FFFFFF"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="Three,Two"
+            android:textColor="#000000"
+            android:layout_marginRight="2dp"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="#FFFFFF"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="Three,Three"
+            android:textColor="#000000"
+            android:layout_marginRight="2dp"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="#FFFFFF"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="Three,Four"
+            android:textColor="#000000"/>
+    </LinearLayout>
+
+    <!-- 第四行 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="#FFFFFF"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="Four,One"
+            android:textColor="#000000"
+            android:layout_marginRight="2dp"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="#FFFFFF"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="Four,Two"
+            android:textColor="#000000"
+            android:layout_marginRight="2dp"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="#FFFFFF"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="Four,Three"
+            android:textColor="#000000"
+            android:layout_marginRight="2dp"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="#FFFFFF"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="Four,Four"
+            android:textColor="#000000"/>
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:stretchColumns="0"
+    android:background="#000000"> <!-- 设置背景为黑色 -->
+
+    <!-- 第一行：标题 -->
+    <TableRow>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Hello TableLayout"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="#FFFFFF" /> <!-- 文字颜色设为白色 -->
+    </TableRow>
+
+    <!-- 第二行：Open... -->
+    <TableRow>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Open..."
+            android:textColor="#FFFFFF" /> <!-- 文字颜色设为白色 -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ctrl-O"
+            android:textColor="#FFFFFF" /> <!-- 文字颜色设为白色 -->
+    </TableRow>
+
+    <!-- 第三行：Save... -->
+    <TableRow>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Save..."
+            android:textColor="#FFFFFF" /> <!-- 文字颜色设为白色 -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ctrl-S"
+            android:textColor="#FFFFFF" /> <!-- 文字颜色设为白色 -->
+    </TableRow>
+
+    <!-- 第四行：Save As... -->
+    <TableRow>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Save As..."
+            android:textColor="#FFFFFF" /> <!-- 文字颜色设为白色 -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ctrl-Shift-S"
+            android:textColor="#FFFFFF" /> <!-- 文字颜色设为白色 -->
+    </TableRow>
+
+    <!-- 第五行：Import... -->
+    <TableRow>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="X Import..."
+            android:textColor="#FFFFFF" /> <!-- 文字颜色设为白色 -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ctrl-I"
+            android:textColor="#FFFFFF" /> <!-- 文字颜色设为白色 -->
+    </TableRow>
+
+    <!-- 第六行：Export... -->
+    <TableRow>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="X Export..."
+            android:textColor="#FFFFFF" /> <!-- 文字颜色设为白色 -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ctrl-E"
+            android:textColor="#FFFFFF" /> <!-- 文字颜色设为白色 -->
+    </TableRow>
+
+    <!-- 第七行：Quit -->
+    <TableRow>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Quit"
+            android:textColor="#FFFFFF" /> <!-- 文字颜色设为白色 -->
+    </TableRow>
+</TableLayout>
