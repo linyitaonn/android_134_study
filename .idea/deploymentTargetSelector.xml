@@ -19,9 +19,6 @@
         </DropdownSelection>
         <DialogSelection />
       </SelectionState>
-      <SelectionState runConfigName="simpleadaptertest">
-        <option name="selectionMode" value="DROPDOWN" />
-      </SelectionState>
       <SelectionState runConfigName="simpleadapter">
         <option name="selectionMode" value="DROPDOWN" />
       </SelectionState>

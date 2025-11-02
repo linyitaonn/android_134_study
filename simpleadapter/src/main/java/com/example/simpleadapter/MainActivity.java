@@ -47,21 +47,18 @@ public class MainActivity extends AppCompatActivity {
         }
     }
     private void sendNotification(String animalName) {
-        // 创建通知点击后的 Intent
         Intent intent = new Intent(this, MainActivity.class);
         intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
         PendingIntent pendingIntent = PendingIntent.getActivity(this, 0, intent, PendingIntent.FLAG_IMMUTABLE);
 
-        // 构建通知
         NotificationCompat.Builder builder = new NotificationCompat.Builder(this, CHANNEL_ID)
-                .setSmallIcon(R.drawable.ic_launcher_foreground) // 使用应用图标
+                .setSmallIcon(R.drawable.ic_launcher_foreground)
                 .setContentTitle(animalName)
                 .setContentText(animalName+"来了")
                 .setPriority(NotificationCompat.PRIORITY_DEFAULT)
                 .setContentIntent(pendingIntent)
                 .setAutoCancel(true);
 
-        // 显示通知
         NotificationManagerCompat notificationManager = NotificationManagerCompat.from(this);
         try {
             notificationManager.notify(animalName.hashCode(), builder.build());
@@ -76,7 +73,6 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_main);
-        // 创建通知渠道
         createNotificationChannel();
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
@@ -112,17 +108,14 @@ public class MainActivity extends AppCompatActivity {
                 HashMap<String, Object> item = (HashMap<String, Object>) parent.getItemAtPosition(position);
                 String animalName = (String) item.get("name");
 
-                // 创建自定义布局的 Toast
                 Toast toast = new Toast(MainActivity.this);
                 View toastView = getLayoutInflater().inflate(R.layout.custom_toast, null);
 
-                // 设置文本内容
                 TextView textView = toastView.findViewById(R.id.toast_text);
                 textView.setText(animalName);
 
                 toast.setView(toastView);
 
-                // 自定义 Toast 可以设置位置
                 DisplayMetrics displayMetrics = getResources().getDisplayMetrics();
                 int screenHeight = displayMetrics.heightPixels;
                 int yPosition = screenHeight * 2/3;
@@ -130,10 +123,8 @@ public class MainActivity extends AppCompatActivity {
                 toast.setDuration(Toast.LENGTH_SHORT);
                 toast.show();
 
-                // 发送通知
                 sendNotification(animalName);
             }
         });
-
     }
 }
