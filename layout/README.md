@@ -63,9 +63,28 @@
 
 ---
 
-## 四、核心代码说明
+## 四、运行效果
 
-### 4.1 LinearLayout关键特性 ([linearlayout.xml](file://D:\data\android_project\layout\src\main\res\layout\linearlayout.xml))
+### 4.1 LinearLayout布局效果
+![LinearLayout布局](../readmePic/linearlayout.png)
+
+>LinearLayout布局运行效果图
+
+### 4.2 ConstraintLayout布局效果
+![ConstraintLayout布局](../readmePic/constraintlayout.png)
+
+>ConstraintLayout布局运行效果图
+
+### 4.3 TableLayout布局效果
+![TableLayout布局](../readmePic/tablelayout.png)
+
+>TableLayout布局运行效果图
+
+---
+
+## 五、核心代码说明
+
+### 5.1 LinearLayout关键特性 ([linearlayout.xml](file://D:\data\android_project\layout\src\main\res\layout\linearlayout.xml))
 ```xml
 <LinearLayout
     android:layout_width="match_parent"
@@ -96,7 +115,7 @@
 ```
 
 
-### 4.2 ConstraintLayout计算器布局关键特性 ([constraintlayout.xml](file://D:\data\android_project\layout\src\main\res\layout\constraintlayout.xml))
+### 5.2 ConstraintLayout计算器布局关键特性 ([constraintlayout.xml](file://D:\data\android_project\layout\src\main\res\layout\constraintlayout.xml))
 ```xml
 <androidx.constraintlayout.widget.ConstraintLayout
     android:layout_width="match_parent"
@@ -123,7 +142,7 @@
 ```
 
 
-### 4.3 TableLayout关键特性 ([tablelayout.xml](file://D:\data\android_project\layout\src\main\res\layout\tablelayout.xml))
+### 5.3 TableLayout关键特性 ([tablelayout.xml](file://D:\data\android_project\layout\src\main\res\layout\tablelayout.xml))
 ```xml
 <TableLayout
     android:layout_width="match_parent"
@@ -146,7 +165,7 @@
 ```
 
 
-### 4.4 复杂ConstraintLayout太空旅行布局关键特性 ([constraintlayout2.xml](file://D:\data\android_project\layout\src\main\res\layout\constraintlayout2.xml))
+### 5.4 复杂ConstraintLayout太空旅行布局关键特性 ([constraintlayout2.xml](file://D:\data\android_project\layout\src\main\res\layout\constraintlayout2.xml))
 ```xml
 <androidx.constraintlayout.widget.ConstraintLayout
     android:layout_width="match_parent"
@@ -205,7 +224,7 @@
 
 ---
 
-## 五、实验总结
+## 六、实验总结
 
 通过本次实验，掌握了Android开发中三种主要布局方式的特点和使用场景：
 1. `LinearLayout`适合简单线性排列的界面

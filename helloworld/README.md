@@ -54,9 +54,18 @@
 
 ---
 
-## 四、核心代码
+## 四、运行效果
 
-### 4.1 MainActivity.java
+![Hello World应用截图](../readmePic/helloWorld.png)
+
+>Hello World应用运行效果图
+
+---
+
+## 五、核心代码
+
+### 5.1 MainActivity.java
+```java
 package com.example.helloworld;
 import androidx.appcompat.app.AppCompatActivity; 
 import android.os.Bundle;
@@ -67,8 +76,9 @@ super.onCreate(savedInstanceState);
 setContentView(R.layout.activity_main); 
 } 
 }
-### 4.2 activity_main.xml
-xml
+```
+### 5.2 activity_main.xml
+```xml
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:layout_width="match_parent" android:layout_height="match_parent">
 <TextView
@@ -81,3 +91,4 @@ app:layout_constraintLeft_toLeftOf="parent"
 app:layout_constraintRight_toRightOf="parent"
 app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>
+```
